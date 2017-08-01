@@ -1,0 +1,781 @@
+html {
+  font-size: $fs14;
+}
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 383px) and (max-width: 800px) {
+  html {
+    font-size: 5px;
+  }
+}
+body {
+
+}
+html, body,.content{
+  background: $body-bg;
+  font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+  overflow: hidden;
+}
+div{
+  box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+}
+.linear-height {
+  width: $width1;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(107, 216, 234, 0.1) 0%, rgba(107, 216, 234, 0.4) 50%, rgba(107, 216, 234, 0.1) 100%);
+  &.no-border {
+    background: transparent;
+  }
+}
+.display-middle{
+  display: inline-block;
+  vertical-align: middle;
+}
+.table{
+  display: table;
+  .table-cell{
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+.display-height, .display-height-bottom{
+  height: 100%;
+  width: $width1;
+  display: inline-block;
+  vertical-align: middle;
+}
+.display-height-bottom{
+  vertical-align: bottom;
+}
+.position-absolute {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.display-none{
+  display: none;
+}
+.arrow {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  &:after{
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    content: "";
+  }
+}
+.chart-title {
+  background: $rgba1;
+  color: $color1;
+  padding: $padding3 $padding10;
+  font-size: 100%;
+  border: solid $width1 $color5;
+  margin-bottom: $padding5;
+}
+.padding-content {
+  padding-top: $padding5;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 85%;
+}
+.content-bg {
+  background: $rgba1;
+  top: $top35;
+  overflow: hidden;
+  color: $color6;
+  .message-offices {
+    width: 30%;
+    padding-left: $padding10;
+  }
+  .message-device{
+    width: 22%;
+    padding-left:$padding10;
+  }
+  .message-name{
+    width: 9%;
+    padding-left:$padding10;
+  }
+  .message-status {
+    width: 10%;
+    padding-left:$padding10;
+  }
+  .message-time{
+    width: 18%;
+    padding-left:$padding10;
+  }
+  .repair_color {
+    color: $color7;
+  }
+  .receive_color {
+    color: $color8;
+  }
+  .finish_color {
+    color: $color9;
+  }
+  .over_color {
+    color: $color10;
+  }
+  .message-title {
+    line-height: $top30;
+    font-size: 100%;
+  }
+  .message-content{
+    top: $top30;
+    font-size: 100%;
+    overflow: hidden;
+    .message-line{
+      line-height: $top30;
+      margin-bottom: $width;
+      background: linear-gradient(to right, rgba(0,149,211,0) 10%, rgba(0,149,211,0.2) 50%, rgba(0,149,211,0) 80%);
+      font-size: 100%;
+      position: relative;
+    }
+  }
+}
+.content{
+  padding: 0 $padding20 $padding20 $padding20;
+  #small-bg {
+    z-index: 0;
+  }
+  .error_init {
+    position: absolute;
+    top:5%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: $color12;
+    display: none;
+    .error-content {
+      border: solid 1px $color12;
+      padding: $padding5 $padding10;
+      .error-icon {
+        background: url("../images/error_icon.png") no-repeat;
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+        margin-right: $padding5;
+      }
+      .error-text {
+
+      }
+    }
+  }
+  .header{
+    color: $color1;
+    position: relative;
+    height: 5%;
+    background: linear-gradient(to right, rgba(0,149,211,0) 0%, rgba(0,149,211,0.2) 50%, rgba(0,149,211,0) 100%);
+    .slyx-log{
+      position: absolute;
+      left: 0;
+      top: 25%;
+      height:50%;
+      img {
+        max-height: 100%;
+      }
+    }
+    .header-title{
+      text-align: center;
+      color: $color1;
+      font-size: 150%;
+      height: 100%;
+      .table {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .time-box{
+      position:absolute;
+      height: 100%;
+      top:0;
+      right: 0;
+      .table {
+        height: 100%;
+        .time-square{
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          text-align: center;
+          box-sizing: content-box;
+        }
+        .time-colon{
+          display: inline-block;
+          vertical-align: middle;
+          margin:0 $width;
+        }
+        .time-long-square{
+          margin-left: $padding5;
+          padding:0 $padding10;
+          width: auto;
+        }
+      }
+    }
+  }
+  .body-content{
+    top:5%;
+    margin: 0 $margin20 $margin20 $margin20;
+    .device-content {
+      height: 15%;
+      .status-flex {
+        width: 25%;
+        text-align: center;
+        height: 100%;
+        padding: $padding10;
+        color: $color6;
+        font-size: 140%;
+        .device-status-pie{
+          width: 1/3*100%;
+          text-align: center;
+          height: 100%;
+        }
+        .display-width {
+          width: 98%;
+        }
+        .status-flex-border {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          .device-name {
+            display: block;
+            margin-bottom: $padding5;
+          }
+          .device-num {
+            margin-left: $padding10;
+            margin-right: $padding5;
+            .device-num-bg {
+              font-size: 200%;
+              margin-right: $padding5;
+              // background: $color4;
+              background: $rgba5;
+              padding: $padding5;
+            }
+          }
+          .linear-height {
+            width: $width1;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(107, 216, 234, 0.1) 0%, rgba(107, 216, 234, 0.4) 50%, rgba(107, 216, 234, 0.1) 100%);
+            &.no-border {
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+    .chart-content {
+      height: 85%;
+      position: relative;
+      .left-chart-content{
+        width: 25%;
+        padding-right: $padding20;
+        .left-half-content{
+          height: 50%;
+          position: relative;
+        }
+      }
+      .center-chart-content{
+        left:25%;
+        width: 50%;
+        padding-right: $padding20;
+        .center-top-content{
+          height: 40%;
+          position: relative;
+          .center-position {
+            width: 50%;
+            &.center-position-right {
+              left: 50%;
+            }
+          }
+          #yigong-box {
+            display: none;
+          }
+        }
+        .center-middle-content{
+          height: 35%;
+          position: relative;
+        }
+        .center-bottom-content{
+          height: 25%;
+          position: relative;
+        }
+      }
+      .right-chart-content{
+        left:75%;
+        .right-chart-three{
+          height: 1/2 * 100%;
+          &.one{
+            top: 0;
+          }
+          &.two{
+            top:1/3 * 100%;
+          }
+          &.three{
+            top:1/2 * 100%;
+            height: 1/2 * 100%;
+            @import "reset";
+          }
+        }
+      }
+    }
+  }
+}
+.gaozhi-icon {
+  background: url("../images/gaozhi.png") no-repeat;
+}
+.shengming-icon {
+  background: url("../images/shengming.png") no-repeat;
+}
+.xunjian-icon {
+  background: url("../images/xunjian.png") no-repeat;
+}
+.guzhang-icon {
+  background: url("../images/guzhang.png") no-repeat;
+}
+.gengxin-icon {
+  background: url("../images/gengxin.png") no-repeat;
+}
+.chaoshi-icon {
+  background: url("../images/chaoshi.png") no-repeat;
+}
+.keshizaiyong-icon {
+  background: url("../images/keshizaiyong.png") no-repeat;
+}
+.keshibaoxiu-icon {
+  background: url("../images/keshibaoxiu.png") no-repeat;
+}
+.yigong-icon {
+  background: url("../images/yigong.png") no-repeat;
+}
+.gaozhi-icon {
+  background: url("../images/gaozhi.png") no-repeat;
+}
+.no_bx {
+  background-image: url("../images/no_bx.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 80%;
+  background-position: center;
+}
+.no_bx_text {
+  text-align: center;
+  height: 100%;
+  width: 48%;
+  color: #9fa0a0;
+  .table{
+    height: 100%;
+  }
+}
+.img-icon {
+  width: 20px;
+  height: 20px;
+  background-size:cover;
+  margin-right: $padding5;
+}
+
+//选择医院页面
+/*.select-bg {
+  background: url("../images/select_bg.jpg") no-repeat 0% 0%;
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 2*$padding20 0;
+  text-align: center;
+  .hospital-content-auto {
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    .hospital-content {
+      .hospital-select-a {
+        color: $color6;
+        outline: none;
+        text-decoration: none;
+        font-size: $fs20;
+        .hospital-line {
+          position: relative;
+          padding: $padding5 0;
+          .hospital-active {
+            position: absolute;
+            right: 100%;
+            color: transparent;
+            .active-icon {
+              background: transparent;
+              position: absolute;
+              top:0;
+            }
+          }
+          .hospital-text {
+            padding: $padding10 4*$padding20 $padding10 $padding10;
+          }
+        }
+        &:focus {
+          .hospital-active {
+            padding: $padding10 10*$padding20 $padding10 $padding10;
+            position: absolute;
+            right: 100%;
+            color: transparent;
+            background: linear-gradient(to left, rgba(255,255,255,.1) 10%, rgba(255,255,255,0) 100%);
+            .active-icon {
+              background: url("../images/icon.png") no-repeat;
+              width: 12px;
+              height: 100%;
+              background-position: center;
+              background-size: contain;
+              position: absolute;
+              top:0;
+              right: $padding10;
+            }
+          }
+          .hospital-line {
+            .hospital-text {
+              background: linear-gradient(to right, rgba(61, 189, 242, .5) 10%, rgba(74, 135, 210, 0) 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+}*/
+
+@media screen and (min-width: 1365px) and (max-width: 1369px) {
+  .content {
+    .body-content {
+      .device-content {
+        height: 20%;
+        .status-flex {
+          font-size: 110%;
+          .status-flex-border {
+            .device-num {
+              .device-num-bg {
+                font-size: 125%;
+              }
+            }
+          }
+        }
+      }
+      .chart-content {
+        height: 80%;
+        .right-chart-content {
+          .right-chart-three {
+            &.three {
+              .medical-chart {
+                .triangle-line  {
+                  .triangle-border {
+                    padding: $padding5 $padding10;
+                    &:last-child {
+                      margin-left: $padding10;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1239px)  {
+  .content-bg {
+    .message-offices {
+      width: 24%;
+    }
+    .message-device{
+      width: 20%;
+    }
+    .message-name{
+      width: 10%;
+    }
+    .message-status {
+      width: 13%;
+    }
+    .message-time{
+      width: 21%;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1360px) {
+  .content {
+    .body-content {
+      .device-content {
+        height: 15%;
+        .status-flex {
+          font-size: 110%;
+          .status-flex-border {
+            .device-num {
+              .device-num-bg {
+                font-size: 125%;
+              }
+            }
+          }
+        }
+      }
+      .chart-content {
+        height: 85%;
+        .right-chart-content {
+          .right-chart-three {
+            &.three {
+              .medical-chart {
+                .triangle-line  {
+                  .triangle-border {
+                    padding: $padding3 $padding5;
+                    &:last-child {
+                      margin-left: $padding5;
+                    }
+                    .time-num {
+                      margin: 0 $padding3;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .content-bg {
+    .message-offices {
+      width: 21%;
+    }
+    .message-device{
+      width: 20%;
+    }
+    .message-name{
+      width: 11%;
+    }
+    .message-status {
+      width: 14%;
+    }
+    .message-time{
+      width: 22%;
+    }
+  }
+  .content {
+    padding: 0 $padding5 $padding5 $padding5;
+    .header{
+      height: 7%;
+      .slyx-log{
+        img {
+          max-height: 100%;
+        }
+      }
+      .header-title{
+        font-size: 110%;
+      }
+      .time-box{
+        font-size: 100%;
+        .time-square{
+
+        }
+        .time-colon{
+
+        }
+      }
+    }
+    .body-content {
+      margin: 0 $padding5 $padding5;
+      top: 7%;
+      .device-content {
+        height: 16%;
+        .status-flex {
+          font-size: 100%;
+          width: 1/3 * 80%;
+          &.device-status-flex {
+            width: 20%;
+            padding: 10px 0;
+          }
+          .status-flex-border {
+            .device-num {
+              margin-left: 7px;
+              margin-right: 2px;
+              .device-num-bg {
+                font-size: 120%;
+                margin-right: 2px;
+              }
+            }
+          }
+        }
+      }
+      .chart-content {
+        height: 84%;
+        .left-chart-content {
+          padding-right: $padding5;
+        }
+        .right-chart-content {
+          .right-chart-three {
+            &.three {
+              .medical-chart {
+                .triangle-line  {
+                  .triangle-border {
+                    padding: $padding3 $padding5;
+                    &:last-child {
+                      margin-left: $padding5;
+                    }
+                    .time-num {
+                      margin: 0 $padding3;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1369px) and (max-height: 900px) {
+  .content {
+    .header{
+      height: 6%;
+    }
+    .body-content {
+      top: 6%;
+      .device-content {
+        height: 15%;
+        .status-flex {
+          font-size: 110%;
+          padding: $padding5;
+          .status-flex-border {
+            .device-num {
+              .device-num-bg {
+                font-size: 125%;
+              }
+            }
+          }
+        }
+      }
+      .chart-content {
+        height: 85%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1369px) and (max-height: 550px) {
+  .content {
+    .header{
+      height: 7%;
+      .header-title {
+        font-size: 120%;
+      }
+    }
+    .body-content {
+      top: 7%;
+      .device-content {
+        height: 15%;
+        .status-flex {
+          font-size: 110%;
+          padding: $padding5;
+          .status-flex-border {
+            .device-num {
+              .device-num-bg {
+                font-size: 110%;
+              }
+            }
+          }
+        }
+      }
+      .chart-content {
+        height: 85%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1368px) and (max-height: 900px) {
+  .content {
+    .header{
+      height: 6%;
+    }
+    .body-content {
+      top: 6%;
+      .device-content {
+        height: 15%;
+        .status-flex {
+          font-size: 110%;
+          padding: $padding5;
+          .status-flex-border {
+            .device-num {
+              .device-num-bg {
+                font-size: 125%;
+              }
+            }
+          }
+        }
+      }
+      .chart-content {
+        height: 85%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1368px) and (max-height: 550px) {
+  .content {
+    .header{
+      height: 7%;
+      .header-title {
+        font-size: 120%;
+      }
+    }
+    .body-content {
+      top: 7%;
+      .device-content {
+        height: 15%;
+        .status-flex {
+          font-size: 110%;
+          padding: $padding5;
+          .status-flex-border {
+            .device-num {
+              .device-num-bg {
+                font-size: 110%;
+              }
+            }
+          }
+        }
+      }
+      .chart-content {
+        height: 85%;
+      }
+    }
+  }
+}
+
+
+
+

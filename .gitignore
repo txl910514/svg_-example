@@ -1,1 +1,5 @@
 .idea/
+node_modules/
+hos_dp/
+rev/
+svg_dist/
