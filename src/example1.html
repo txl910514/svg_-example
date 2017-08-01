@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0,maximum-scale=2.0, minimum-scale=0.5, user-scalable=no,target-densitydpi=device-dpi">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>直线</title>
+  <link rel="shortcut icon" href="images/favicon.png">
+  <script type="text/javascript" src="jslib/jquery.min.js"></script>
+</head>
+<body>
+<!--moveto(M 或 m):移动到新的位置-->
+<!--lineto(L 或 l):从当前坐标画一条直线到一个新坐标-->
+<!--horizontal lineto(H 或 h):画一条水平线到新坐标-->
+<!--vertical lineto(V 或 v):画一条垂直线到新坐标-->
+<!--closepath(Z 或 z):关闭当前路径-->
+<svg width="600" height="400"> <path d="M 50 50 l 0 300 l 200 0 l 0 -300 l -200 0" fill="none" stroke="#000" stroke-width="2px" /> </svg>
+<!--closepath指令-->
+<svg width="600" height="400"> <path d="M 50 50 l 0 300 l 200 0 l 0 -300 Z" fill="none" stroke="#000" stroke-width="2px" /> </svg>
+<!--horizontal lineto 和 vertical lineto指令-->
+<svg width="600" height="400"> <path d="M 50 50 v 300 h 200 v -300 Z" fill="none" stroke="#000" stroke-width="2px" /> </svg>
+<!--样式、空格和逗号-->
+<svg width="600" height="400"> <path d="M50,50 v300 h200 v-300 Z" fill="none" stroke="#000" stroke-width="2px" /> </svg>
+<!--分段线-->
+<svg width="600" height="400"> <path d="M50,50 v200 M100 50 h200" fill="none" stroke="#000" stroke-width="2px" /> </svg>
+</body>
+</html>
