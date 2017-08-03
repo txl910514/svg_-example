@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @keyframes spin {
+            to {
+                stroke-dashoffset: -264;
+            }
+        }
+        .progress circle {
+            fill: none;
+            stroke: slategray;
+            stroke-width: 16;
+            stroke-linecap: round;
+            stroke-dasharray: 0, 0, 50, 214;
+            stroke-dashoffset: 0;
+            animation: spin 4s infinite linear;
+        }
+    </style>
+</head>
+<body>
+<svg class="progress" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="42" transform="rotate(-90,50,50)" />
+</svg>
+<div>
+    http://dabblet.com/gist/6089395
+</div>
+<div>
+    https://tympanus.net/Development/SVGDrawingAnimation/index.html
+</div>
+</body>
+</html>

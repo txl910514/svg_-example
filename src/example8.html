@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        svg {
+            width: 500px;
+            height: 500px;
+        }
+        polygon {
+            stroke: black;
+            stroke-linecap: round;
+            stroke-width: 4;
+            stroke-dasharray: 0, 0, 50, 190;
+            stroke-dashoffset: 0;
+            stroke-linejoin: round;
+            animation: spin 3.5s infinite linear;
+        }
+        @keyframes spin {
+            0% {
+                stroke: #00aeef
+            }
+            37.5% {
+                stroke: #ed1c24;
+            }
+            67.5% {
+                stroke: #f69f37;
+            }
+            100% {
+                stroke-dashoffset: -250;
+                stroke: #00aeef;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--stroke-miterlimit 属性给 miter-length 和 stroke-width 之间的比率做了限制，它的比值范围应大于或等于1。当比值不在这个范围的时候， stroke 就会被转换成斜角（bevel）-->
+<svg class="progress" viewBox="0 0 52.56 60.756" >
+
+    <polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="
+	26.844,50.531 9.975,41.525 9.975,21.517 26.844,31.531 43.714,21.125 43.714,42.047 26.844,50.531 26.844,31.531 9.975,21.517
+	26.844,11.531 43.714,21.125 26.844,31.531 "/>
+
+</svg>
+<div>
+    http://dabblet.com/gist/6089409
+</div>
+</body>
+</html>

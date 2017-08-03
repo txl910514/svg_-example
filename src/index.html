@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1, maximum-scale=1, minimum-scale=1">
 </head>
 <body>
 <a href="./example1.html"></a>
 <a href="./example2.html"></a>
+<span  class="ths">还好</span>
+<span class="ths">哈哈</span>
+<script type="text/javascript" src="jslib/jquery.min.js"></script>
+<script>
+    $('.ths').on('click', function (ele, i) {
+      console.log(i)
+      console.log($(this))
+    })
+</script>
 </body>
 </html>
